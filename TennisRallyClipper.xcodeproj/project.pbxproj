@@ -17,6 +17,7 @@
 		A10000000000000000000027 /* RallyDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000017 /* RallyDetector.swift */; };
 		A10000000000000000000028 /* RallyExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000018 /* RallyExporter.swift */; };
 		A10000000000000000000029 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000019 /* ShareSheet.swift */; };
+		A10000000000000000000050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000040 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		A10000000000000000000017 /* RallyDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RallyDetector.swift; sourceTree = "<group>"; };
 		A10000000000000000000018 /* RallyExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RallyExporter.swift; sourceTree = "<group>"; };
 		A10000000000000000000019 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		A10000000000000000000040 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				A10000000000000000000031 /* Models */,
 				A10000000000000000000032 /* Analysis */,
 				A10000000000000000000033 /* Export */,
+				A10000000000000000000040 /* Assets.xcassets */,
 			);
 			path = TennisRallyClipper;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10000000000000000000050 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +266,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TennisRallyClipper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -290,6 +295,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TennisRallyClipper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
