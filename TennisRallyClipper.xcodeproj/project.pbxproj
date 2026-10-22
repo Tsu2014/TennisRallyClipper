@@ -6,36 +6,18 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXProject section */
-		A10000000000000000000001 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
-				TargetAttributes = {
-					A10000000000000000000005 = {
-						CreatedOnToolsVersion = 15.0;
-					};
-				};
-			};
-			buildConfigurationList = A1000000000000000000000A /* Build configuration list for PBXProject "TennisRallyClipper" */;
-			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = A10000000000000000000002;
-			productRefGroup = A10000000000000000000003 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				A10000000000000000000005 /* TennisRallyClipper */,
-			);
-		};
-/* End PBXProject section */
+/* Begin PBXBuildFile section */
+		A10000000000000000000020 /* TennisRallyClipperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000010 /* TennisRallyClipperApp.swift */; };
+		A10000000000000000000021 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* ContentView.swift */; };
+		A10000000000000000000022 /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* VideoPicker.swift */; };
+		A10000000000000000000023 /* RallyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* RallyListView.swift */; };
+		A10000000000000000000024 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000014 /* PlayerView.swift */; };
+		A10000000000000000000025 /* Rally.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000015 /* Rally.swift */; };
+		A10000000000000000000026 /* MotionAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000016 /* MotionAnalyzer.swift */; };
+		A10000000000000000000027 /* RallyDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000017 /* RallyDetector.swift */; };
+		A10000000000000000000028 /* RallyExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000018 /* RallyExporter.swift */; };
+		A10000000000000000000029 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000019 /* ShareSheet.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A10000000000000000000009 /* TennisRallyClipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TennisRallyClipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,18 +33,15 @@
 		A10000000000000000000019 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXBuildFile section */
-		A10000000000000000000020 /* TennisRallyClipperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000010 /* TennisRallyClipperApp.swift */; };
-		A10000000000000000000021 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* ContentView.swift */; };
-		A10000000000000000000022 /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* VideoPicker.swift */; };
-		A10000000000000000000023 /* RallyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* RallyListView.swift */; };
-		A10000000000000000000024 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000014 /* PlayerView.swift */; };
-		A10000000000000000000025 /* Rally.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000015 /* Rally.swift */; };
-		A10000000000000000000026 /* MotionAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000016 /* MotionAnalyzer.swift */; };
-		A10000000000000000000027 /* RallyDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000017 /* RallyDetector.swift */; };
-		A10000000000000000000028 /* RallyExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000018 /* RallyExporter.swift */; };
-		A10000000000000000000029 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000019 /* ShareSheet.swift */; };
-/* End PBXBuildFile section */
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		A10000000000000000000002 = {
@@ -152,6 +131,47 @@
 		};
 /* End PBXNativeTarget section */
 
+/* Begin PBXProject section */
+		A10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A10000000000000000000005 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A1000000000000000000000A /* Build configuration list for PBXProject "TennisRallyClipper" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000002;
+			productRefGroup = A10000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000005 /* TennisRallyClipper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A10000000000000000000006 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -171,26 +191,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		A10000000000000000000007 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXResourcesBuildPhase section */
-		A10000000000000000000008 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		A1000000000000000000000C /* Debug */ = {
@@ -246,12 +246,13 @@
 				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K57JWBZ42S;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "用于保存自动剪辑生成的高光视频到相册";
-				INFOPLIST_KEY_UILaunchScreenGeneration = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreenGeneration = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -273,12 +274,13 @@
 				ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K57JWBZ42S;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "用于保存自动剪辑生成的高光视频到相册";
-				INFOPLIST_KEY_UILaunchScreenGeneration = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreenGeneration = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -316,7 +318,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = A10000000000000000000001 /* Project object */;
 }

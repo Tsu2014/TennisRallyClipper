@@ -119,8 +119,8 @@ struct ContentView: View {
                     .listStyle(.insetGrouped)
                 }
 
-                Spacer(minLength: 8)
-
+            }
+            .safeAreaInset(edge: .bottom) {
                 HStack(spacing: 12) {
                     Button {
                         showPicker = true
@@ -142,7 +142,8 @@ struct ContentView: View {
                     }
                 }
                 .padding(.horizontal)
-                .padding(.bottom, 8)
+                .padding(.vertical, 10)
+                .background(.regularMaterial)
             }
             .navigationTitle("网球回合剪辑")
             .sheet(isPresented: $showPicker) {
