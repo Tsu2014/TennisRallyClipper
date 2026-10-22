@@ -28,10 +28,9 @@ struct RallyExporter {
             withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid
         )
         let audioTrack = asset.tracks(withMediaType: .audio).first
-        let compAudio = audioTrack.map {
+        let compAudio: AVMutableCompositionTrack? = audioTrack == nil ? nil :
             composition.addMutableTrack(withMediaType: .audio,
                                         preferredTrackID: kCMPersistentTrackID_Invalid)
-        }
 
         var cursor = CMTime.zero
         do {

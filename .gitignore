@@ -2,6 +2,7 @@
 DerivedData/
 *.xcuserdata/
 *.xcworkspace/xcuserdata/
+build/
 Build/
 *.hmap
 .swiftpm/
