@@ -107,13 +107,20 @@ struct ContentView: View {
                 }
 
                 if !model.rallies.isEmpty {
+                    let total = model.rallies.reduce(0.0) { $0 + $1.duration }
                     List {
-                        Section(header: Text("检测到的回合（\(model.rallies.count)）")) {
+                        Section {
                             ForEach(model.rallies) { rally in
                                 RallyRow(rally: rally) {
                                     seek(to: rally.startTime)
                                 }
                             }
+                        } header: {
+                            Text("剪辑回合列表（\(model.rallies.count) 个）")
+                        } footer: {
+                            Text("每个回合前后各含 2 秒缓冲，导出成片预计约 \(String(format: "%.1f", total)) 秒（点击任意一行可预览跳转）")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
                         }
                     }
                     .listStyle(.insetGrouped)

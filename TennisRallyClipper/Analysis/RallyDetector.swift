@@ -11,7 +11,7 @@ struct RallyDetectorConfig {
     /// 短于该值（秒）的片段会被丢弃（视为噪声）
     var minRallyDuration: Double = 1.0
     /// 每个回合前后补充的缓冲时间（秒）
-    var margin: Double = 0.5
+    var margin: Double = 2.0
 }
 
 /// 把运动能量时间序列聚合成「回合」区间。

@@ -14,7 +14,7 @@ struct RallyRow: View {
                     Text("\(format(rally.startTime)) → \(format(rally.endTime))")
                         .font(.caption)
                         .foregroundColor(.secondary)
-                    Text("时长 \(String(format: "%.1f", rally.duration))s")
+                    Text("时长 \(String(format: "%.1f", rally.duration))s · 含前后各 2 秒缓冲")
                         .font(.caption2)
                         .foregroundColor(.secondary)
                 }
