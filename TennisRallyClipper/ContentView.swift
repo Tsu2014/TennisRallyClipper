@@ -1,7 +1,7 @@
 import SwiftUI
 import AVFoundation
-import Photos
 import CoreMedia
+import UIKit
 
 /// 串联「选视频 → 分析 → 检测回合 → 导出」的状态机。
 final class EditorModel: ObservableObject {
@@ -202,20 +202,31 @@ struct ContentView: View {
     }
 
     private func saveToPhotos(_ url: URL) {
-        PHPhotoLibrary.requestAuthorization { status in
-            guard status == .authorized || status == .limited else {
-                DispatchQueue.main.async {
-                    alertMessage = "未获得相册写入权限"
-                }
-                return
-            }
-            PHPhotoLibrary.shared().performChanges({
-                PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
-            }) { success, _ in
-                DispatchQueue.main.async {
-                    alertMessage = success ? "已保存到相册" : "保存失败"
-                }
+        VideoSaver.shared.save(url) { success, _ in
+            DispatchQueue.main.async {
+                alertMessage = success ? "已保存到相册" : "保存失败，请检查相册权限"
             }
         }
+    }
+}
+
+/// 用 UIKit 的视频保存 API 把文件写入系统相册（最稳定，自动处理授权）。
+final class VideoSaver: NSObject {
+    static let shared = VideoSaver()
+    private var completion: ((Bool, Error?) -> Void)?
+
+    func save(_ url: URL, completion: @escaping (Bool, Error?) -> Void) {
+        self.completion = completion
+        UISaveVideoAtPathToSavedPhotosAlbum(
+            url.path, self,
+            #selector(video(_:didFinishSavingWithError:contextInfo:)), nil
+        )
+    }
+
+    @objc private func video(_ videoPath: String,
+                             didFinishSavingWithError error: Error?,
+                             contextInfo: UnsafeRawPointer) {
+        completion?(error == nil, error)
+        completion = nil
     }
 }
